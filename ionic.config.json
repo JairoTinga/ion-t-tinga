@@ -1,0 +1,7 @@
+{
+  "name": "ion-t-tinga",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
