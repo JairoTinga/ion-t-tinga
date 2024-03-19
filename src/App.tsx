@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { calculatorOutline, ellipse, personCircleOutline, pushOutline, square, triangle } from 'ionicons/icons';
+import { calculatorOutline, ellipse, home, personCircleOutline, pushOutline, square, triangle } from 'ionicons/icons';
 
 // Home resources
 import Home from './pages/home';
