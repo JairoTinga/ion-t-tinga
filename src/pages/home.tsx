@@ -2,6 +2,7 @@ import {
     //Initial Components
     IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
 } from '@ionic/react';
+import ExploreContainer from '../components/ExploreContainer';
 
 // CSS
 //import './profile.css';
@@ -20,6 +21,7 @@ import {
               <IonTitle size="large">Home</IonTitle>
             </IonToolbar>
           </IonHeader>
+          <ExploreContainer name="Home Page :D" />
         </IonContent>
       </IonPage>
     );

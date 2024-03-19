@@ -73,6 +73,11 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
 
+          {/* Home Tab Button */}
+            <IonTabButton tab="home" href="/home">
+            <IonIcon aria-hidden="true" icon={home} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
 
 
           <IonTabButton tab="tab1" href="/tab1">
