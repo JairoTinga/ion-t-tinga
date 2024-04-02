@@ -79,7 +79,12 @@ const Tab3: React.FC = () => {
             <IonCol>
               <IonButton onClick={() => handleInput('-')}>-</IonButton>
             </IonCol>
-            {/* Add buttons for other operators */}
+            <IonCol>
+              <IonButton onClick={() => handleInput('/')}>/</IonButton>
+            </IonCol>
+            <IonCol>
+              <IonButton onClick={() => handleInput('*')}>*</IonButton>
+            </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
