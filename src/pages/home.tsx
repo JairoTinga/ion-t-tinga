@@ -1,6 +1,6 @@
 import {
     //Initial Components
-    IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
+    IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCard
 } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 
@@ -21,7 +21,21 @@ import ExploreContainer from '../components/ExploreContainer';
               <IonTitle size="large">Home</IonTitle>
             </IonToolbar>
           </IonHeader>
-          <ExploreContainer name="Home Page :D" />
+          <IonCardHeader>
+      </IonCardHeader>
+      <IonCardHeader>
+      </IonCardHeader>
+      <IonCardHeader>
+      </IonCardHeader><IonCardHeader>
+      </IonCardHeader><IonCardHeader>
+      </IonCardHeader>
+      <IonCardHeader>
+      </IonCardHeader>
+      <IonCardHeader>
+      </IonCardHeader>
+          <IonCard>
+      <img alt="Silhouette of mountains" src="../src/assets/img/walterwhite.gif" />
+      </IonCard>
         </IonContent>
       </IonPage>
     );
