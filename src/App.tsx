@@ -15,6 +15,8 @@ import { home, personCircleOutline } from 'ionicons/icons';
 // Home resources
 import Home from './pages/home';
 import Profile from './pages/Profile';
+import ClickCounter from './pages/ClickCounter';
+import Calculator from './pages/Calculator';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
