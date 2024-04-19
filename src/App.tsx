@@ -36,6 +36,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import TodoList from './pages/Todolist';
 
 setupIonicReact();
 
@@ -61,6 +62,7 @@ const App: React.FC = () => (
           <Route exact path="/calculator">
             <Calculator />
           </Route>
+          
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">

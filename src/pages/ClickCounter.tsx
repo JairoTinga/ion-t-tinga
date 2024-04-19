@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import { useHistory } from 'react-router-dom';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
+  const history = useHistory();
+
+  const navigateBack = () =>
+    history.goBack();
   const [clickCount, setClickCount] = useState(0);
 
   const handleButtonClick = () => {
     setClickCount(prevCount => prevCount + 1);
+    
   };
   return (
     <IonPage>
@@ -23,8 +29,10 @@ const Tab2: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name={`Tab 2 page - Click count: ${clickCount}`} />
+        
         <IonButton expand="full" onClick={handleButtonClick}>Click me</IonButton>
       </IonContent>
+      <IonButton onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };

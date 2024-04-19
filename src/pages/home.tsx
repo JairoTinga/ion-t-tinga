@@ -37,14 +37,6 @@ const Home: React.FC = () => {
         </IonHeader>
         <IonGrid>
           <IonRow>
-            <IonRouterOutlet>
-          <Route exact path="/Clickounter">
-            <ClickCounter />
-          </Route>
-          <Route path="/Calculator">
-            <Calculator />
-          </Route>
-          </IonRouterOutlet>
             <IonCol size="12" size-sm="6" offset-sm="3">
               {/* Click Counter Card */}
               <IonRouterLink href="/ClickCounter">
@@ -63,6 +55,18 @@ const Home: React.FC = () => {
                 <IonCard button>
                   <IonCardHeader>
                     <IonCardTitle>Calculator</IonCardTitle>
+                  </IonCardHeader>
+                </IonCard>
+              </IonRouterLink>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol size="12" size-sm="6" offset-sm="3">
+              {/* Todo Lis Card */}
+              <IonRouterLink href="/TodoList">
+                <IonCard button>
+                  <IonCardHeader>
+                    <IonCardTitle>Todo List</IonCardTitle>
                   </IonCardHeader>
                 </IonCard>
               </IonRouterLink>

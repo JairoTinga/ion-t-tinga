@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import { useHistory } from 'react-router-dom';
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
+  const history = useHistory();
+
+  const navigateBack = () =>
+    history.goBack();
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
 
   const handleInput = (value: string) => {
     setInput(prevInput => prevInput + value);
   };
+  
 
   const clearInput = () => {
     setInput('');
@@ -102,7 +108,9 @@ const Tab3: React.FC = () => {
             </IonCol>
           </IonRow>
         </IonGrid>
+        
       </IonContent>
+      <IonButton onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };
