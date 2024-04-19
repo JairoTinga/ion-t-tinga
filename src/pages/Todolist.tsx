@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonList, IonItem, IonLabel, IonInput, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/react';
 import { add } from 'ionicons/icons';
+import { useHistory } from 'react-router-dom';
 import './Tab2.css';
 
 const TodoList: React.FC = () => {
+    const history = useHistory();
+
+  const navigateBack = () =>
+    history.goBack();
   const [tasks, setTasks] = useState<string[]>([]);
   const [newTask, setNewTask] = useState('');
 
@@ -53,6 +58,7 @@ const TodoList: React.FC = () => {
         </IonRow>
         </IonGrid>
       </IonContent>
+      <IonButton onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };

@@ -62,7 +62,9 @@ const App: React.FC = () => (
           <Route exact path="/calculator">
             <Calculator />
           </Route>
-          
+          <Route exact path="/todolist">
+            <TodoList />
+          </Route>
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
