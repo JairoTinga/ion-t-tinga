@@ -55,6 +55,12 @@ const App: React.FC = () => (
           <Route exact path="/profile">
             <Profile />
           </Route>
+          <Route exact path="/clickcounter">
+            <ClickCounter />
+          </Route>
+          <Route exact path="/calculator">
+            <Calculator />
+          </Route>
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
