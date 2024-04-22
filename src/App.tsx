@@ -36,7 +36,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import TodoList from './pages/TodoList';
+import TodoList from './pages/Todolist';
 
 setupIonicReact();
 
