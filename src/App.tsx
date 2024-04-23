@@ -70,8 +70,8 @@ const App: React.FC = () => (
         <IonTabBar slot="bottom">
           {/* Home Tab Button */}
           <IonTabButton tab="home" href="/home">
-            <IonIcon aria-hidden="true" icon={home} />
-            <IonLabel>Home</IonLabel>
+            <IonIcon color="dark" aria-hidden="true" icon={home} />
+            <IonLabel color="primary">Home</IonLabel>
           </IonTabButton>
 
           {/* Placeholder for a blank tab */}
@@ -82,7 +82,7 @@ const App: React.FC = () => (
 
           {/* Profile Tab Button */}
           <IonTabButton tab="profile" href="/profile">
-            <IonIcon aria-hidden="true" icon={personCircleOutline} />
+            <IonIcon  color="dark" aria-hidden="true" icon={personCircleOutline} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
         </IonTabBar>

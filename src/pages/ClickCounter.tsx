@@ -32,7 +32,7 @@ const Tab2: React.FC = () => {
         
         <IonButton expand="full" onClick={handleButtonClick}>Click me</IonButton>
       </IonContent>
-      <IonButton onClick={navigateBack}>Back</IonButton>
+      <IonButton color="danger" onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };

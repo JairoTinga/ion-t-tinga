@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonList, IonItem, IonLabel, IonCheckbox, IonRow, IonGrid, IonCol, IonInput, IonIcon } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import { trashOutline, createOutline } from 'ionicons/icons';
-import './Tab2.css';
+import './todolist.css';
 
 const Tab2: React.FC = () => {
   const history = useHistory();
@@ -67,7 +67,7 @@ const Tab2: React.FC = () => {
           {todos.map(todo => (
             <IonItem key={todo.id}>
               <IonCheckbox slot="start" checked={todo.completed} onIonChange={() => toggleTodo(todo.id)} />
-              <IonLabel>{todo.text}</IonLabel>
+              <IonLabel className="todolist-result">{todo.text}</IonLabel>
               <div className="ion-text-end">
                 <IonButton fill="clear" onClick={() => editTodo(todo.id, prompt("Edit task:", todo.text))}>
                   <IonIcon icon={createOutline} />
@@ -80,18 +80,18 @@ const Tab2: React.FC = () => {
           ))}
         </IonList>
         <IonItem>
-          <IonInput
+          <IonInput className="todolist-title" 
             placeholder="Enter a task"
             value={newTodoText}
             onIonChange={(e) => setNewTodoText(e.detail.value!)}
           />
-          <IonButton expand="block" onClick={addTodo}>Add Task</IonButton>
+          <IonButton color="success" expand="block" onClick={addTodo}>Add Task</IonButton>
         </IonItem>
         </IonCol>
         </IonRow>
         </IonGrid>
       </IonContent>
-      <IonButton onClick={navigateBack}>Back</IonButton>
+      <IonButton  color="danger" onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };

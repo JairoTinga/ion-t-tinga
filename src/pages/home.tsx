@@ -13,12 +13,15 @@ import {
   IonRow,
   IonCol,
   IonRouterLink,
-  IonRouterOutlet
+  IonRouterOutlet,
+  IonIcon
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import ClickCounter from '../pages/ClickCounter';
 import Calculator from '../pages/Calculator';
+import { home, personCircleOutline, calculatorOutline } from 'ionicons/icons';
+
 
 const Home: React.FC = () => {
   return (
@@ -37,11 +40,12 @@ const Home: React.FC = () => {
         </IonHeader>
         <IonGrid>
           <IonRow>
+            
             <IonCol size="12" size-sm="6" offset-sm="3">
               {/* Click Counter Card */}
               <IonRouterLink href="/ClickCounter">
-                <IonCard button>
-                  <IonCardHeader>
+                <IonCard button color="primary">
+                  <IonCardHeader >
                     <IonCardTitle>Click Counter</IonCardTitle>
                   </IonCardHeader>
                 </IonCard>
@@ -52,9 +56,10 @@ const Home: React.FC = () => {
             <IonCol size="12" size-sm="6" offset-sm="3">
               {/* Calculator Card */}
               <IonRouterLink href="/Calculator">
-                <IonCard button>
-                  <IonCardHeader>
-                    <IonCardTitle>Calculator</IonCardTitle>
+                <IonCard button color="primary">
+                        <IonCardHeader>
+                      <IonCardTitle>Calculator</IonCardTitle>
+                      
                   </IonCardHeader>
                 </IonCard>
               </IonRouterLink>
@@ -64,7 +69,7 @@ const Home: React.FC = () => {
             <IonCol size="12" size-sm="6" offset-sm="3">
               {/* Todo Lis Card */}
               <IonRouterLink href="/TodoList">
-                <IonCard button>
+                <IonCard button color="primary">
                   <IonCardHeader>
                     <IonCardTitle>TodoList</IonCardTitle>
                   </IonCardHeader>
