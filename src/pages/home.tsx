@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   IonContent,
   IonHeader,
@@ -7,76 +7,69 @@ import {
   IonToolbar,
   IonCard,
   IonCardHeader,
-  IonCardSubtitle,
   IonCardTitle,
   IonGrid,
   IonRow,
   IonCol,
   IonRouterLink,
-  IonRouterOutlet
+  IonSearchbar
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { Redirect, Route } from 'react-router-dom';
-import ClickCounter from '../pages/ClickCounter';
-import Calculator from '../pages/Calculator';
+
+// Sample data for cards
+const cardData = [
+  { title: 'Click Counter', route: '/ClickCounter' },
+  { title: 'Calculator', route: '/Calculator' },
+  { title: 'TodoList', route: '/TodoList' }
+];
 
 const Home: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [filteredCards, setFilteredCards] = useState<any[]>(cardData);
+
+  // Filter cards based on search term
+  const filterCards = (term: string) => {
+    const filtered = cardData.filter(card =>
+      card.title.toLowerCase().includes(term.toLowerCase())
+    );
+    setFilteredCards(filtered);
+  };
+
   return (
     <IonPage>
-      <IonReactRouter>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
+        <IonSearchbar
+          value={searchTerm}
+          onIonChange={(e) => filterCards(e.detail.value ?? '')}
+        />
         <IonGrid>
-          <IonRow>
-            <IonCol size="12" size-sm="6" offset-sm="3">
-              {/* Click Counter Card */}
-              <IonRouterLink href="/ClickCounter">
-                <IonCard button>
-                <IonCardHeader className="ion-text-center">
-                    <IonCardTitle>Click Counter</IonCardTitle>
-                  </IonCardHeader>
-                </IonCard>
-              </IonRouterLink>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol size="12" size-sm="6" offset-sm="3">
-              {/* Calculator Card */}
-              <IonRouterLink href="/Calculator">
-                <IonCard button>
-                <IonCardHeader className="ion-text-center">
-                    <IonCardTitle>Calculator</IonCardTitle>
-                  </IonCardHeader>
-                </IonCard>
-              </IonRouterLink>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol size="12" size-sm="6" offset-sm="3">
-              {/* Todo Lis Card */}
-              <IonRouterLink href="/TodoList">
-              <IonCard button>
-                <IonCardHeader className="ion-text-center">
-                    <IonCardTitle>TodoList</IonCardTitle>
-                  </IonCardHeader>
-                </IonCard>
-              </IonRouterLink>
-            </IonCol>
-          </IonRow>
+          {filteredCards.map((card, index) => (
+            <IonRow key={index}>
+              <IonCol size="12" size-sm="6" offset-sm="3">
+                <IonRouterLink href={card.route}>
+                  <IonCard button>
+                    <IonCardHeader className="ion-text-center">
+                      <IonCardTitle>{card.title}</IonCardTitle>
+                    </IonCardHeader>
+                  </IonCard>
+                </IonRouterLink>
+              </IonCol>
+            </IonRow>
+          ))}
         </IonGrid>
       </IonContent>
-      </IonReactRouter>
     </IonPage>
-    
   );
 };
 
