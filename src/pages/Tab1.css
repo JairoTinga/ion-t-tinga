@@ -1,0 +1,13 @@
+/* Tab1.css */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card-container > ion-card {
+    max-width: 300px; /* Adjust as needed */
+  }
+  

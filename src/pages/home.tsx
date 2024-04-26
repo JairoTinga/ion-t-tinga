@@ -41,7 +41,7 @@ const Home: React.FC = () => {
               {/* Click Counter Card */}
               <IonRouterLink href="/ClickCounter">
                 <IonCard button>
-                  <IonCardHeader>
+                <IonCardHeader className="ion-text-center">
                     <IonCardTitle>Click Counter</IonCardTitle>
                   </IonCardHeader>
                 </IonCard>
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
               {/* Calculator Card */}
               <IonRouterLink href="/Calculator">
                 <IonCard button>
-                  <IonCardHeader>
+                <IonCardHeader className="ion-text-center">
                     <IonCardTitle>Calculator</IonCardTitle>
                   </IonCardHeader>
                 </IonCard>
@@ -64,8 +64,8 @@ const Home: React.FC = () => {
             <IonCol size="12" size-sm="6" offset-sm="3">
               {/* Todo Lis Card */}
               <IonRouterLink href="/TodoList">
-                <IonCard button>
-                  <IonCardHeader>
+              <IonCard button>
+                <IonCardHeader className="ion-text-center">
                     <IonCardTitle>TodoList</IonCardTitle>
                   </IonCardHeader>
                 </IonCard>
