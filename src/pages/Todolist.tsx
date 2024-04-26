@@ -91,7 +91,7 @@ const Tab2: React.FC = () => {
         </IonRow>
         </IonGrid>
       </IonContent>
-      <IonButton onClick={navigateBack}>Back</IonButton>
+      <IonButton color="danger" onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };

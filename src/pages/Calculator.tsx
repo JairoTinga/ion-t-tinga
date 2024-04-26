@@ -1,6 +1,7 @@
+// Tab3.tsx
+
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import { useHistory } from 'react-router-dom';
 import './Tab3.css';
 
@@ -15,7 +16,6 @@ const Tab3: React.FC = () => {
   const handleInput = (value: string) => {
     setInput(prevInput => prevInput + value);
   };
-  
 
   const clearInput = () => {
     setInput('');
@@ -37,8 +37,8 @@ const Tab3: React.FC = () => {
           <IonTitle>Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonGrid>
+      <IonContent fullscreen className="ion-padding">
+        <IonGrid className="calculator-grid">
           <IonRow>
             <IonCol size="12">
               <IonItem>
@@ -46,7 +46,7 @@ const Tab3: React.FC = () => {
               </IonItem>
             </IonCol>
           </IonRow>
-          <IonRow>
+          <IonRow className="button-row">
             <IonCol>
               <IonButton onClick={() => handleInput('1')}>1</IonButton>
             </IonCol>
@@ -57,6 +57,11 @@ const Tab3: React.FC = () => {
               <IonButton onClick={() => handleInput('3')}>3</IonButton>
             </IonCol>
             <IonCol>
+              <IonButton onClick={() => handleInput('+')}>+</IonButton>
+            </IonCol>
+          </IonRow>
+          <IonRow className="button-row">
+            <IonCol>
               <IonButton onClick={() => handleInput('4')}>4</IonButton>
             </IonCol>
             <IonCol>
@@ -65,6 +70,11 @@ const Tab3: React.FC = () => {
             <IonCol>
               <IonButton onClick={() => handleInput('6')}>6</IonButton>
             </IonCol>
+            <IonCol>
+              <IonButton onClick={() => handleInput('-')}>-</IonButton>
+            </IonCol>
+          </IonRow>
+          <IonRow className="button-row">
             <IonCol>
               <IonButton onClick={() => handleInput('7')}>7</IonButton>
             </IonCol>
@@ -75,29 +85,21 @@ const Tab3: React.FC = () => {
               <IonButton onClick={() => handleInput('9')}>9</IonButton>
             </IonCol>
             <IonCol>
-              <IonButton onClick={() => handleInput('0')}>0</IonButton>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <IonButton onClick={() => handleInput('+')}>+</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton onClick={() => handleInput('-')}>-</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton onClick={() => handleInput('/')}>/</IonButton>
-            </IonCol>
-            <IonCol>
               <IonButton onClick={() => handleInput('*')}>*</IonButton>
             </IonCol>
           </IonRow>
-          <IonRow>
+          <IonRow className="button-row">
             <IonCol>
               <IonButton onClick={clearInput}>Clear</IonButton>
             </IonCol>
             <IonCol>
+              <IonButton onClick={() => handleInput('0')}>0</IonButton>
+            </IonCol>
+            <IonCol>
               <IonButton onClick={calculateResult}>=</IonButton>
+            </IonCol>
+            <IonCol>
+              <IonButton onClick={() => handleInput('/')}>/</IonButton>
             </IonCol>
           </IonRow>
           <IonRow>
@@ -110,7 +112,7 @@ const Tab3: React.FC = () => {
         </IonGrid>
         
       </IonContent>
-      <IonButton onClick={navigateBack}>Back</IonButton>
+      <IonButton color="danger" onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };
