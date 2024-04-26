@@ -64,7 +64,7 @@ const Home: React.FC = () => {
             <IonCol size="12" size-sm="6" offset-sm="3">
               {/* Todo Lis Card */}
               <IonRouterLink href="/TodoList">
-                <IonCard button>
+              <IonCard button>
                 <IonCardHeader className="ion-text-center">
                     <IonCardTitle>TodoList</IonCardTitle>
                   </IonCardHeader>

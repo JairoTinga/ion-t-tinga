@@ -24,6 +24,7 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
 
+        <div className="card-container">
         <IonCard>
           <img alt="Silhouette of mountains" src="../src/assets/img/quincy.jpg" />
           <IonCardHeader>
@@ -71,7 +72,7 @@ const Tab1: React.FC = () => {
 
           
         </IonCard>
-
+            </div>
       </IonContent>
       <IonButton onClick={navigateBack}>Back</IonButton>
     </IonPage>
