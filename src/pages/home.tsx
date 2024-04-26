@@ -20,7 +20,8 @@ import { IonReactRouter } from '@ionic/react-router';
 const cardData = [
   { title: 'Click Counter', route: '/ClickCounter' },
   { title: 'Calculator', route: '/Calculator' },
-  { title: 'TodoList', route: '/TodoList' }
+  { title: 'TodoList', route: '/TodoList' },
+  { title: 'Quote Generator', route: '/GeneratorQuote' }
 ];
 
 const Home: React.FC = () => {
