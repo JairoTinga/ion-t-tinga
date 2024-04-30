@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
-import './Tab3.css';
 
-const Tab3: React.FC = () => {
+const Calculator: React.FC = () => {
   const history = useHistory();
 
   const navigateBack = () =>
@@ -117,4 +116,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default Calculator;

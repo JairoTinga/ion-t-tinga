@@ -1,9 +1,9 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonButton, IonAlert, IonActionSheet } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
-import './Tab1.css';
+import './Profile.css';
 
-const Tab1: React.FC = () => {
+const Profile: React.FC = () => {
   const history = useHistory();
 
   const navigateBack = () => {
@@ -79,4 +79,4 @@ const Tab1: React.FC = () => {
   );
 };
 
-export default Tab1;
+export default Profile;
