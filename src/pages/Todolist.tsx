@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonList, IonItem, IonLabel, IonCheckbox, IonRow, IonGrid, IonCol, IonInput, IonIcon } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import { trashOutline, createOutline } from 'ionicons/icons';
-import './Tab2.css';
 
-const Tab2: React.FC = () => {
+
+const Todolist: React.FC = () => {
   const history = useHistory();
 
   const navigateBack = () =>
@@ -96,4 +96,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default Todolist;

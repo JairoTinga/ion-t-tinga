@@ -28,12 +28,18 @@ import {
   IonAvatar,
   IonThumbnail
 } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
 
 
 //Dynamic data reference
 import quoteCard from '../assets/json/quoteCard.json';
 
 const QuotesGenerator: React.FC = () => {
+
+  const history = useHistory();
+
+  const navigateBack = () =>
+    history.goBack();
 
   const [showAlert, setShowAlert] = useState(false);
   const [randomIndex, setRandomIndex] =  useState<number | null>(null); // State to store random index
@@ -101,6 +107,7 @@ const QuotesGenerator: React.FC = () => {
           </IonGrid>
         </IonCard>  
       </IonContent>
+      <IonButton color="danger" onClick={navigateBack}>Back</IonButton>
     </IonPage>
   );
 };
