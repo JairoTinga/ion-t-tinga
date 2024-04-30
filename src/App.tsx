@@ -20,7 +20,7 @@ import Calculator from './pages/Calculator';
 import TodoList from './pages/Todolist';
 import GeneratorQuote from './pages/GeneratorQuote';
 import Notes from './pages/Notes';
-
+import Test1 from './pages/Test1';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -76,6 +76,10 @@ const App: React.FC = () => (
           <Route exact path="/notes">
             <Notes />
           </Route>
+          <Route exact path="/test1">
+            <Test1 />
+          </Route>
+
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
