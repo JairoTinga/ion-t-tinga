@@ -22,7 +22,8 @@ const cardData = [
   { title: 'Calculator', route: '/Calculator' },
   { title: 'TodoList', route: '/TodoList' },
   { title: 'Quote Generator', route: '/GeneratorQuote' },
-  { title: 'Notes', route: '/Notes '}
+  { title: 'Notes', route: '/Notes '},
+  { title: 'Test1', route: '/Test1 '}
 ];
 
 const Home: React.FC = () => {
