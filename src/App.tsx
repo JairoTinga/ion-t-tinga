@@ -61,7 +61,7 @@ const App: React.FC = () => (
           <Route exact path="/ion-t-tinga/profile">
             <Profile />
           </Route>
-          <Route exact path="/clickcounter">
+          <Route exact path="/ion-t-tinga/clickcounter">
             <ClickCounter />
           </Route>
           <Route exact path="/calculator">
