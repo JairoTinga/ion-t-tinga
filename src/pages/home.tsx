@@ -18,7 +18,7 @@ import { IonReactRouter } from '@ionic/react-router';
 
 // Sample data for cards
 const cardData = [
-  { title: 'Click Counter', route: '/ClickCounter' },
+  { title: 'Click Counter', route: '/ion-t-tinga/ClickCounter' },
   { title: 'Calculator', route: '/Calculator' },
   { title: 'TodoList', route: '/TodoList' },
   { title: 'Quote Generator', route: '/GeneratorQuote' },
