@@ -53,6 +53,8 @@ const QuoteGenerator: React.FC = () => {
   const inputRefDescription = useRef<HTMLIonTextareaElement>(null);
   const [present] = useIonToast();
 
+  const [randomDescription, setRandomDescription] = useState<string>(''); // Add randomDescription state
+
   
   // Clear the input field
   const clearInput = () => {
@@ -181,18 +183,21 @@ const history = useHistory();
     }
   };
 
-  // Function to handle opening of the alert
+ // Function to handle opening of the alert
   const handleOpenAlert = () => {
-    const newIndex = generateRandomIndex();
-    setRandomIndex(newIndex);
+    const randomIndex = Math.floor(Math.random() * quotegenerator.length); // Generate a random index
+    const randomDescription = quotegenerator[randomIndex]?.description || ''; // Get the description at the random index
     setShowAlert(true);
+    setRandomDescription(randomDescription); // Store the random description in state
   };
 
   // Function to handle closing of the alert
   const handleAlertDismiss = () => {
-    setRandomIndex(0); // Reset the index to 0
     setShowAlert(false); // Hide the alert
+    setRandomDescription(''); // Clear the random description
   };
+
+
   return (
     <IonPage>
       <IonHeader>
@@ -227,7 +232,7 @@ const history = useHistory();
                 id="custom-input"
                 labelPlacement="floating"
                 counter={true}
-                maxlength={200}
+                maxlength={2000}
                 counterFormatter={(inputLength, maxLength) => `${maxLength - inputLength} / ${maxLength} characters remaining`}
                 value={newDescription}
                 onIonInput={(e) => setNewDescription(e.detail.value!)}
@@ -242,10 +247,10 @@ const history = useHistory();
                 <IonAlert
                   isOpen={showAlert}
                   onDidDismiss={handleAlertDismiss} // Call the handleAlertDismiss function when the alert is closed
-                  header="Quote! :D"
-                  subHeader=""
-                  message={renderRandomMessage()}
-                  buttons={['Close']}
+                  header="Quote Generator" // Header for the alert
+                  subHeader="" // Subheader for the alert
+                  message={randomDescription} // Use randomDescription as the message to display
+                  buttons={['Close']} // Close button for the alert
                 />
                 </IonCol>
               <IonCol>
@@ -286,6 +291,7 @@ const history = useHistory();
             </IonItem>
           ))}
         </IonList> 
+        
       </IonContent>
       <IonButton color="danger" onClick={navigateBack}>Back</IonButton>
     </IonPage>
