@@ -51,17 +51,17 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           {/* Application default route */}
-          <Route exact path="/">
-            <Redirect to="/home" />
+          <Route exact path="/ion-t-tinga/">
+            <Redirect to="/ion-t-tinga/home" />
           </Route>
           {/* Home Router */}
-          <Route exact path="/home">
+          <Route exact path="/ion-t-tinga/home">
             <Home />
           </Route>
-          <Route exact path="/profile">
+          <Route exact path="/ion-t-tinga/profile">
             <Profile />
           </Route>
-          <Route exact path="/clickcounter">
+          <Route exact path="/ion-t-tinga/clickcounter">
             <ClickCounter />
           </Route>
           <Route exact path="/calculator">
@@ -84,7 +84,7 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           {/* Home Tab Button */}
-          <IonTabButton tab="home" href="/home">
+          <IonTabButton tab="home" href="/ion-t-tinga/home">
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
@@ -96,7 +96,7 @@ const App: React.FC = () => (
           </IonTabButton>
 
           {/* Profile Tab Button */}
-          <IonTabButton tab="profile" href="/profile">
+          <IonTabButton tab="profile" href="/ion-t-tinga/profile">
             <IonIcon aria-hidden="true" icon={personCircleOutline} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
