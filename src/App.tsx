@@ -64,19 +64,19 @@ const App: React.FC = () => (
           <Route exact path="/ion-t-tinga/clickcounter">
             <ClickCounter />
           </Route>
-          <Route exact path="/calculator">
+          <Route exact path="/ion-t-tinga/calculator">
             <Calculator />
           </Route>
-          <Route exact path="/todolist">
+          <Route exact path="/ion-t-tinga/todolist">
             <TodoList />
           </Route>
-          <Route exact path="/generatorquote">
+          <Route exact path="/ion-t-tinga/generatorquote">
             <GeneratorQuote />
           </Route>
-          <Route exact path="/notes">
+          <Route exact path="/ion-t-tinga/notes">
             <Notes />
           </Route>
-          <Route exact path="/quote">
+          <Route exact path="/ion-t-tinga/quote">
             <Quote />
           </Route>
 
