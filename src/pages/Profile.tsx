@@ -1,5 +1,31 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonButton, IonAlert, IonActionSheet } from '@ionic/react';
+import { IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonIcon,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+  IonItemDivider,
+  IonSearchbar,
+  IonAlert,
+  IonActionSheet,
+  IonAvatar,
+  IonThumbnail } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import './Profile.css';
 
@@ -40,7 +66,7 @@ const Profile: React.FC = () => {
             subHeader="forsen"
             message="i have pipebombs on your mailbox"
             buttons={['Back']}
-          ><img alt="Silhouette of mountains" src="../src/assets/img/profile.png" /></IonAlert>
+          ><img alt="Silhouette of mountains" src="../src/assets/img/mrfresh.gif" /></IonAlert>
 
           <IonButton color="warning" fill="outline" id="open-action-sheet" expand="full">Action</IonButton>
           <IonActionSheet
