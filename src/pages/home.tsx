@@ -126,13 +126,14 @@ const Home: React.FC = () => {
           {cardData
             .filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()))
             .map((card, index) => (
-              <IonCard key={index} routerLink={card.link} routerDirection='forward'>
+              <IonCard key={index} routerLink={card.link} routerDirection='forward' className="gradient">
+
                 <IonCardHeader>
                   <IonCardTitle>
                     <IonGrid>
                       <IonRow>
-                        <IonCol size="2">
-                          <IonIcon className="home-card-icon" icon={card.icon} color="primary" />
+                        <IonCol size="1">
+                          <IonIcon className="home-card-icon" icon={card.icon} color="success" />
                         </IonCol>
                         <IonCol size="auto">
                             <div className="home-card-title">{card.title}</div>
@@ -142,7 +143,7 @@ const Home: React.FC = () => {
                                 key={i}
                                 className="home-card-subicon"
                                 icon={icon}
-                                color="primary" // Set color as needed
+                                color="success" // Set color as needed
                               />
                             ))}
                           </IonCol>
