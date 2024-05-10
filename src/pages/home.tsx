@@ -150,7 +150,7 @@ const Home: React.FC = () => {
                       <IonCol size="1">
                         <IonIcon className="home-card-icon" icon={card.icon} color="success" />
                       </IonCol>
-                      <img src ={card.image} className="card-gif" />
+                      
                       <IonCol size="auto">
                         <div className="home-card-title">{card.title}</div>
                         <IonCardSubtitle>{card.subtitle}</IonCardSubtitle>
