@@ -146,10 +146,11 @@ const Home: React.FC = () => {
                 <IonCardTitle>
                   <IonGrid>
                     <IonRow>
+                    
                       <IonCol size="1">
                         <IonIcon className="home-card-icon" icon={card.icon} color="success" />
                       </IonCol>
-                      <img src={card.image} alt={card.title} style={{ width: '5%', height: '5%' }} /> {/* Render image here */}
+                      <img src ={card.image} className="card-gif" />
                       <IonCol size="auto">
                         <div className="home-card-title">{card.title}</div>
                         <IonCardSubtitle>{card.subtitle}</IonCardSubtitle>
@@ -163,6 +164,7 @@ const Home: React.FC = () => {
                         ))}
                         
                       </IonCol>
+                      
                     </IonRow>
                   </IonGrid>
                 </IonCardTitle>

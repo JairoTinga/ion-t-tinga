@@ -52,7 +52,7 @@ const Profile: React.FC = () => {
 
         <div className="card-container">
         <IonCard>
-          <img alt="Silhouette of mountains" src="../src/assets/img/quincy.jpg" />
+          <img src="../src/assets/img/quincy.jpg" />
           <IonCardHeader>
             <IonCardTitle>Jairo</IonCardTitle>
             <IonCardSubtitle>pee pee poo poo</IonCardSubtitle>
@@ -66,7 +66,7 @@ const Profile: React.FC = () => {
             subHeader="forsen"
             message="i have pipebombs on your mailbox"
             buttons={['Back']}
-          ><img alt="Silhouette of mountains" src="../src/assets/img/mrfresh.gif" /></IonAlert>
+          ><img src="../src/assets/img/mrfresh.gif" /></IonAlert>
 
           <IonButton color="warning" fill="outline" id="open-action-sheet" expand="full">Action</IonButton>
           <IonActionSheet
